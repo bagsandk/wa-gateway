@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  headless-wa-gateway:
+    container_name: headless-wa-gateway
+    build: .
+    env_file:
+    - .env
+    restart: on-failure
+    ports:
+      - "5001:5001"
